@@ -1,38 +1,173 @@
+/* General Body Styles */
+body {
+  font-family: 'Montserrat', sans-serif; /* एक मॉडर्न और साफ-सुथरा फोंट */
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* हल्का ग्रे बैकग्राउंड */
+  color: #333; /* गहरा ग्रे टेक्स्ट कलर */
+  line-height: 1.6;
+}
+
+/* App Container */
 .App {
+  text-align: center; /* सारी कंटेंट को बीच में लाने के लिए */
+}
+
+/* Header Styles */
+.main-header {
+  background-color: #c00; /* ट्रम्प की थीम का लाल रंग */
+  color: white;
+  padding: 2rem 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* थोड़ा शैडो इफेक्ट */
+}
+
+.main-header h1 {
+  margin: 0;
+  font-size: 3em; /* बड़ी हेडलाइन */
+  letter-spacing: 2px; /* अक्षरों के बीच थोड़ी जगह */
+  font-family: 'Oswald', sans-serif; /* मजबूत फोंट */
+}
+
+.main-header .tagline {
+  font-size: 1.2em;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* Hero Section Styles */
+.hero-section {
+  background-color: #fff; /* सफेद बैकग्राउंड */
+  padding: 3rem 1rem;
+  margin-top: 2rem;
+  border-bottom: 1px solid #ddd; /* हल्की बॉर्डर */
+}
+
+.hero-section .hero-image {
+  width: 250px; /* इमेज की चौड़ाई */
+  height: 250px; /* इमेज की ऊँचाई */
+  border-radius: 50%; /* गोल इमेज */
+  object-fit: cover; /* इमेज को सही से फिट करने के लिए */
+  border: 5px solid #000; /* मोटी काली बॉर्डर */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* इमेज पर शैडो */
+  margin-bottom: 1.5rem;
+}
+
+.hero-section h2 {
+  color: #000; /* काला टेक्स्ट */
+  font-size: 2.5em;
+  margin-bottom: 1rem;
+}
+
+.hero-section p {
+  max-width: 800px;
+  margin: 0 auto; /* पैराग्राफ को बीच में लाने के लिए */
+  font-size: 1.1em;
+  color: #555;
+}
+
+/* Bio Section Styles */
+.bio-section {
+  background-color: #eee; /* हल्का ग्रे बैकग्राउंड */
+  padding: 3rem 1rem;
+  margin-top: 2rem;
+  text-align: left; /* टेक्स्ट को बाईं ओर संरेखित करें */
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; /* हल्के गोल कोने */
+}
+
+.bio-section h2 {
+  color: #c00; /* लाल हेडलाइन */
+  font-size: 2em;
+  border-bottom: 2px solid #c00; /* हेडलाइन के नीचे लाल लाइन */
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.bio-section p {
+  font-size: 1em;
+  color: #444;
+}
+
+/* Footer Styles */
+.main-footer {
+  background-color: #333; /* गहरा ग्रे फुटर */
+  color: white;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+  font-size: 0.9em;
+}
+/* Achievements Section Styles */
+.achievements-section {
+  background-color: #f9f9f9; /* बहुत हल्का ग्रे */
+  padding: 3rem 1rem;
+  margin-top: 2rem;
+}
+
+.achievements-section h2 {
+  color: #000;
+  font-size: 2.2em;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 280px मिनिमम चौड़ाई वाले कार्ड्स, ऑटो-फिट */
+  gap: 2rem; /* कार्ड्स के बीच की जगह */
+  max-width: 1200px;
+  margin: 0 auto; /* ग्रिड को बीच में लाने के लिए */
+  padding: 0 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.achievement-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* गहरा शैडो */
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* होवर इफेक्ट के लिए ट्रांजीशन */
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px); /* होवर करने पर थोड़ा ऊपर उठेगा */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* होवर पर गहरा शैडो */
+}
+
+.achievement-card h3 {
+  color: #000; /* काला हेडलाइन */
+  font-size: 1.5em;
+  margin-bottom: 1rem;
+}
+
+.achievement-card p {
+  color: #666;
+  font-size: 0.95em;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .main-header h1 {
+    font-size: 2.5em;
+  }
+  .hero-section h2 {
+    font-size: 2em;
+  }
+  .bio-section, .achievements-grid {
+    padding: 0 1rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 480px) {
+  .main-header h1 {
+    font-size: 2em;
   }
-  to {
-    transform: rotate(360deg);
+  .main-header .tagline {
+    font-size: 1em;
+  }
+  .hero-section h2 {
+    font-size: 1.8em;
   }
 }
